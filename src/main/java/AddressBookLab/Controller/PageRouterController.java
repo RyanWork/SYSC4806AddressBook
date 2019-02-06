@@ -8,11 +8,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class PageRouterController {
     @Autowired
     AddressBookService abs;
+
+    @RequestMapping("/")
+    @ResponseBody
+    public String greeting() {
+        return "Hello World";
+    }
 
     @RequestMapping(value="addressbook/{id}", method = RequestMethod.GET)
     public String routeAddressBook(@PathVariable(value="id") int id, Model model){
