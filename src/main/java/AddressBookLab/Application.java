@@ -25,7 +25,7 @@ public class Application {
     }
 
     @Bean
-    public CommandLineRunner demo(BuddyInfoRepository repository, AddressBookRepository addressBookRepository) {
+    public CommandLineRunner demo() {
         return (args) -> {
             /*
             AddressBook ab = new AddressBook();

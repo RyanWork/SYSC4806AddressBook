@@ -19,7 +19,7 @@ public class AddressBookController {
     private final AtomicLong counter = new AtomicLong();
 
     @Autowired
-    AddressBookService abs;
+    private AddressBookService abs;
 
     /**
      * Mapping for addressbook
